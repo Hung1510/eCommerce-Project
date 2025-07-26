@@ -1,8 +1,6 @@
 package com.personalProject.basicshop.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,10 +13,15 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 public class Image {
+    @Id
+    @GeneratedValue(strategy =GenerationType.IDENTITY)
     private Long id;
     private String fileName;
     private String fileType;
+
+    @Lob
     private Blob image;
     private String downloadUrl;
 
