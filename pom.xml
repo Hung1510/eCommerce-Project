@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.5.3</version>
+		<version>3.3.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.personalProject</groupId>
-	<artifactId>basic-shop</artifactId>
+	<groupId>com.dailycodework</groupId>
+	<artifactId>dream-shops</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>basic-shop</name>
-	<description>A basic eCommerce demo app</description>
+	<name>dream-shops</name>
+	<description>A simple eCommerce demo app</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -28,6 +28,7 @@
 	</scm>
 	<properties>
 		<java.version>17</java.version>
+		<modelmapper-spring.version>2.4.4</modelmapper-spring.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -41,6 +42,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.modelmapper.extensions</groupId>
+			<artifactId>modelmapper-spring</artifactId>
+			<version>${modelmapper-spring.version}</version>
 		</dependency>
 
 		<dependency>
@@ -62,18 +69,6 @@
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<annotationProcessorPaths>
-						<path>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</path>
-					</annotationProcessorPaths>
-				</configuration>
-			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
